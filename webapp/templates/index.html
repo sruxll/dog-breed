@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex">
+
+    <title>Dog Breed Classification</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="../static/dropzone.css"/>
+    <link rel="stylesheet" href="../static/main.css"/>
+
+  </head>
+
+  <body>
+    <div class="head">
+      <nav id="navbar" class="navbar">
+        <a href="#Home">
+        </a>
+        <ul class="nav">
+          <li class="" data-menuanchor="Home">
+            <a class="" href="#Home">Home</a>
+          </li>
+          <li class="" data-menuanchor="Example">
+            <a class="" href="#Example">Examples</a>
+          </li>
+          <li class="" data-menuanchor="Classify">
+            <a class="" href="#Classify">Dog Breed</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="fullpage">
+      <div id="section0" class="section active">
+        <div>
+          <img src="../static/img/Labrador_retriever_06457.jpg" class="cover_img" width="">
+          <h2 class="text-dark-grey"><br>Identify the dog breed</h1>
+          <p class="text-grey description">Dog breed classification
+          </p>
+          <p class="lead">
+            <br>
+            <a href="#Home" class="btn btn-lg btn-secondary text-light" id="btn-try-me">Try it!</a>
+          </p>
+        </div>
+      </div>
+
+      <div id="section1" class="section text-grey description">
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bg-secondary"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="bg-secondary"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" class="bg-secondary"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3" class="bg-secondary"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#Classify"><img id="brittany" src="../uploads/Brittany_02625.jpg" class="eg-img"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#Classify"><img id="curly_coated" src="../uploads/Curly-coated_retriever_03896.jpg" class="eg-img"></a>
+     
+            </div>
+            <div class="carousel-item">
+                <a href="#Classify"><img id="human5" src="../uploads/human_5.jpg" class="eg-img"></a>        
+            </div>
+            <div class="carousel-item">
+                <a href="#Classify"><img id="petsitting" src="../uploads/petsitting_pawsitive.png" class="eg-img"></a>        
+            </div>
+            <div class="carousel-item">
+              <a href="#Classify"><img id="labrador" src="../uploads/Labrador_retriever_06457.jpg" class="eg-img"></a>        
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div id="section2" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" id="left_col">
+              <img src="" class="img-source" id="source_image"/>
+            </div>
+            <div class="col-lg-6" id="right_col">
+              <p/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <a href="#Classify" class="btn btn-primary btn-upload" id="btn-upload-image">Upload image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal section -->
+    <div class="modal fade" id="upload-image-dialog" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageUploader">Upload your image</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <div class="dropzone" id="upload-area"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="upload_button">Upload</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class"text-right">
+      <img src="../static/img/Spinner.gif" height="1" style="display: none;">
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+    <!-- Additional module -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <script src="../static/dog_breed.js"></script>
+    
+    
+    <script>
+      $(document).ready(function() {
+	      $('#fullpage').fullpage({
+          sectionsColor: ['#ecf4ff', '#eef2f6', '#ecf4ff'],
+          anchors: ['Home', 'Example', 'Classify'],
+          menu: '#navbar',
+          paddingTop: "3.5rem",
+          responsiveWidth: 1280
+        });
+      });
+    </script>
+  </body>
