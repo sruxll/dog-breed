@@ -3,7 +3,6 @@
 A image classifier for identifying dog breed. Given an image of a dog, the classifier will identify an estimate of the canine’s breed.  If supplied an image of a human, the code will identify the resembling dog breed.
 
 # Overview
-The following is a screenshot of the Web app of this classifier.
 ![Web app homepage](images/web_screenshot.png)
 
 
@@ -19,6 +18,18 @@ pip install -r requirements.txt
 
 ## Run Web app
 A web app been provided for running the inference on the dog breed classification.
+
+### Through docker
+
+- Build docker image
+```
+docker build -t dog-breed .
+```
+- Run the container
+```
+docker run -it -p 3001:3001 dog-breed
+```
+### Directly run with Python
 ```bash
 cd webapp
 python3 run_server.py
